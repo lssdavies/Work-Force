@@ -1,10 +1,11 @@
 INSERT INTO department
 (name) 
-VALUES 
+VALUES
+("Accounting"), 
 ("Executives"),
-("Accounting"),
-("I.T."),
 ("H.R."),
+("I.T."),
+("Operations"),
 ("Sales");
 
 INSERT INTO roles
