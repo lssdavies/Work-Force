@@ -14,10 +14,10 @@ VALUES
 ("CFO", "95000", 1),
 ("Operations Manager", "75000", 1), 
 ("Account Receivables", "45000", 2),
-("Account Payables", "45000", 2)
+("Account Payables", "45000", 2),
 ("Systems Administrator", "40000", 3), 
 ("Account Executive", "35000", 5),
-("HR Associate", "44000", 4),
+("HR Associate", "44000", 4);
 
 INSERT INTO employees 
 (first_name, last_name, role_id, manager_id) 
@@ -30,4 +30,4 @@ VALUES
 ("John", "Smith", 6, 3),
 ("Marsha", "Bradey", 7, 3),
 ("Pamela", "Anderson", 8, 3),
-("Nick", "Smith", 9, 8);
+("Nick", "Smith", 8, 3);
