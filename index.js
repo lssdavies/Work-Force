@@ -55,7 +55,7 @@ const determineAction = (answer) => {
     addEmp();
   }
   if (answer.tasks === "Update an employee's role") {
-    //updateEmps();
+    updateEmps();
   }
   if (answer.tasks === "Exit Work Force") {
     process.exit();
