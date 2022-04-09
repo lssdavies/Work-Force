@@ -1,6 +1,6 @@
 //connecting to db importing connection.js
-const db = require("./db/connection");
-const mysql2 = require("mysql2");
+//const db = require("./db/connection");
+const mysql = require("mysql2");
 const inquirer = require("inquirer");
 const console_table = require("console.table");
 
@@ -13,7 +13,7 @@ async function runApp() {
 *************************** Work Force ************************************ 
 ===========================================================================
     `);
-   inquirer.prompt([
+  const answers = await inquirer.prompt([
       {
         type: "list",
         name: "tasks",
@@ -28,25 +28,25 @@ async function runApp() {
           "Update an employee's role",
         ],
       },
-    ]);
+    ]).then((answers) => {
+      determineAction(answers);
+    })
     
 }
 
-
-//     // .then((response) => {
-//     //   console.log(response);
-//     //   determineAction(response);
-//     // });
-// };
-
 const determineAction = (answer) =>  {
     if (answer === "View all departments") {
-      console.log("display all department");
+      viewAllDept();
     } else if (answer === "View all roles") {
       console.log("display all roles");
     } else if (answer === "View all employees") {
       console.log("display all employees");
     }
+}
+
+//tasks functions
+const viewAllDept = () => {
+  
 }
 
 runApp();
